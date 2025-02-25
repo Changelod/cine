@@ -1,5 +1,7 @@
 .DS_Store
 xcuserdata/
+cine.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserstate
 cine.xcodeproj/project.xcworkspace/xcuserdata/angelo.xcuserdatad/UserInterfaceState.xcuserstate
 UserInterfaceState.xcuserstate
 
