@@ -143,7 +143,7 @@ class SeatsViewController: UIViewController {
     
     @objc private func buyButtonTapped() {
         guard let selectedSeat = selectedSeat else {
-            let alert = UIAlertController(title: "Error", message: "Por favor, selecciona un asiento", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: "Por favor, presiona un asiento", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             return
