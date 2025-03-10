@@ -164,29 +164,27 @@ class SeatsViewController: UIViewController {
         
     }
     
-    func handleSeatSelection(_ seat: Seat) {
-        self.selectedSeat = seat
-        createTicketDraft()
-    }
-    
-    private func createTicketDraft() {
-        guard let selectedSeat = selectedSeat else { return }
-        
-        let ticketDraft = Ticket(ticketNumber: 0, seatNumber: selectedSeat.id, showTime: Int(showtime.time) ?? 0, screen: Int(showtime.screen) ?? 0, movie: movie.movieName)
-        
-        print("Ticket creado: \(ticketDraft)")
-    }
+//    func handleSeatSelection(_ seat: Seat) {
+//        self.selectedSeat = seat
+//        createTicketDraft()
+//    }
+//    
+//    private func createTicketDraft() {
+//        guard let selectedSeat = selectedSeat else { return }
+//        
+//        let ticketDraft = Ticket(ticketNumber: 0, seatNumber: selectedSeat.id, showTime: Int(showtime.time) ?? 0, screen: Int(showtime.screen) ?? 0, movie: movie.movieName)
+//        
+//        print("Ticket creado: \(ticketDraft)")
+//    }
     
 }
 
-// MARK: - Configuración de la UI
 extension SeatsViewController {
     
     private func setupUI() {
         view.backgroundColor = .white
 //        title = "Selecciona Asiento " // \(showtime.screen) 
         
-        // Configurar cada componente de la UI
         setupBuyButton()
         setupScrollView()
         setupContentStack()

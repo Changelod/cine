@@ -32,16 +32,16 @@ class ShowTimeCellView: UITableViewCell {
 
 private extension ShowTimeCellView {
     
-     func setupUI(){
+    func setupUI(){
         setupTimeLabel()
     }
     
-     func setupTimeLabel() {
+    func setupTimeLabel() {
         contentView.addSubview(timeLabel)
         
         NSLayoutConstraint.activate([
             timeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-                        timeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            timeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             timeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             timeLabel.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -16),
         ])

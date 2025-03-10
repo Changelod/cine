@@ -11,11 +11,9 @@ class TicketManager {
     
     static let shared = TicketManager()
     private init() {}
-
+    
     private var ticketCounter: Int = 4
     
-
-
     var tickets: [Ticket] = [
         Ticket(ticketNumber: 1, seatNumber: "A2", showTime: 1800, screen: 1, movie: "Existenz"),
         Ticket(ticketNumber: 2, seatNumber: "A5", showTime: 1830, screen: 4, movie: "Existenz"),
@@ -27,10 +25,9 @@ class TicketManager {
         ticketCounter += 1
         return ticketCounter
     }
-
     
     func addTicket(_ ticket: Ticket) {
         tickets.append(ticket)
-
+        
     }
 }

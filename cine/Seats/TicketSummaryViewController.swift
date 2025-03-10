@@ -11,7 +11,6 @@ class TicketSummaryViewController: UIViewController {
     
     private var ticketDraft: TicketDraft
     
-
     private var ticketTitleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +21,7 @@ class TicketSummaryViewController: UIViewController {
         label.layer.masksToBounds = true
         return label
     }()
-
+    
     private let ticketDetailStackView: UIStackView = {
         let stackview = UIStackView()
         stackview.translatesAutoresizingMaskIntoConstraints = false
@@ -32,7 +31,7 @@ class TicketSummaryViewController: UIViewController {
         stackview.spacing = 8
         return stackview
     }()
-
+    
     private var screenNumberLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +43,7 @@ class TicketSummaryViewController: UIViewController {
         label.layer.masksToBounds = true
         return label
     }()
-
+    
     private var movieNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +55,7 @@ class TicketSummaryViewController: UIViewController {
         label.layer.masksToBounds = true
         return label
     }()
-
+    
     private var seatNumberLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -68,7 +67,7 @@ class TicketSummaryViewController: UIViewController {
         label.layer.masksToBounds = true
         return label
     }()
-
+    
     private var movieShowTimeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -109,20 +108,20 @@ class TicketSummaryViewController: UIViewController {
         self.ticketDraft = ticketDraft
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         configureView(with: ticketDraft)
-       
+        
     }
     
     func configureView(with ticketDraft: TicketDraft) {
-//        ticketTitleLabel.text = "Confirmar entrada"
+        //        ticketTitleLabel.text = "Confirmar entrada"
         screenNumberLabel.text = "Sala: \(ticketDraft.screen)"
         movieNameLabel.text = "Película: \(ticketDraft.movie)"
         seatNumberLabel.text = "Asiento: \(ticketDraft.seatNumber)"
@@ -136,22 +135,18 @@ class TicketSummaryViewController: UIViewController {
     @objc private func confirmButtonTapped() {
         
         let newTicketNumner = TicketManager.shared.generateTicketNumber()
-        
         let newTicket = Ticket(ticketNumber: newTicketNumner, seatNumber: ticketDraft.seatNumber, showTime: ticketDraft.showTime, screen: ticketDraft.screen, movie: ticketDraft.movie)
-        
         TicketManager.shared.addTicket(newTicket)
-        
-        print("Ticket agregado:", newTicket)
-        print("Total tickets:", TicketManager.shared.tickets.count)
-        
+        //        print("Ticket agregado:", newTicket)
+        //        print("Total tickets:", TicketManager.shared.tickets.count)
         let ticketPurchaseVC = TicketPurchaseViewController(ticket: newTicket)
         navigationController?.pushViewController(ticketPurchaseVC, animated: true)
     }
-
+    
 }
 
 extension TicketSummaryViewController {
-
+    
     func setupUI() {
         view.backgroundColor = .systemCyan
         setupTicketTitleLabel()
@@ -159,7 +154,7 @@ extension TicketSummaryViewController {
         setupBackButton()
         setupConfirmButtom()
     }
-
+    
     func setupTicketTitleLabel(){
         view.addSubview(ticketTitleLabel)
         NSLayoutConstraint.activate([
@@ -169,19 +164,19 @@ extension TicketSummaryViewController {
             ticketTitleLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor, constant: 0)
         ])
     }
-
+    
     func setupTicketDetailStackView() {
         view.addSubview(ticketDetailStackView)
         ticketDetailStackView.addArrangedSubview(screenNumberLabel)
         ticketDetailStackView.addArrangedSubview(movieNameLabel)
         ticketDetailStackView.addArrangedSubview(seatNumberLabel)
         ticketDetailStackView.addArrangedSubview(movieShowTimeLabel)
-
+        
         NSLayoutConstraint.activate([
             ticketDetailStackView.topAnchor.constraint(equalTo: ticketTitleLabel.bottomAnchor, constant: 10),
             ticketDetailStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             ticketDetailStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-//            ticketDetailStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
+            //            ticketDetailStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
         ])
     }
     
@@ -190,7 +185,7 @@ extension TicketSummaryViewController {
         NSLayoutConstraint.activate([
             backButton.topAnchor.constraint(equalTo: ticketDetailStackView.bottomAnchor, constant: 10),
             backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 75),
-//            backButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -200),
+            //            backButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -200),
             
             backButton.widthAnchor.constraint(equalToConstant: 100),
             backButton.heightAnchor.constraint(equalToConstant: 30)

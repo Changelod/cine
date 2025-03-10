@@ -9,12 +9,27 @@ import UIKit
 
 class TabController: UITabBarController {
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let tabBarAppearance = UITabBarAppearance()
+//        tabBarAppearance.configureWithOpaqueBackground() // Elimina la translucidez
+//        tabBarAppearance.backgroundColor = UIColor.white // Cambia el color de fondo
+//        
+//        tabBar.standardAppearance = tabBarAppearance
+//        if #available(iOS 15.0, *) {
+//            tabBar.scrollEdgeAppearance = tabBarAppearance
+//        }
+//        
+//        let topBorder = CALayer()
+//        topBorder.name = "topBorder"
+//        topBorder.frame = CGRect(x: 0, y: 0, width: tabBar.bounds.width, height: 1)
+//        topBorder.backgroundColor = UIColor.black.cgColor
+//        
+//        tabBar.layer.addSublayer(topBorder)
+        
         self.setupTabs()
+        
     }
     
     private func setupTabs() {
@@ -31,10 +46,9 @@ class TabController: UITabBarController {
         nav.tabBarItem.title = title
         nav.tabBarItem.image = image
         
-//        nav.viewControllers.first?.navigationItem.title = title + "Controller"
-//        nav.viewControllers.first?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Button", style: .plain , target: nil, action: nil)
+        //        nav.viewControllers.first?.navigationItem.title = title + "Controller"
+        //        nav.viewControllers.first?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Button", style: .plain , target: nil, action: nil)
         nav.navigationBar.isHidden = true
-        
         
         return nav
         

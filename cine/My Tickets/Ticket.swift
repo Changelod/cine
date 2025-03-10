@@ -11,7 +11,7 @@ struct Ticket: Codable{
     let showTime: Int
     let screen: Int
     let movie: String
-
+    
     init(ticketNumber: Int, seatNumber: String, showTime: Int, screen: Int, movie: String) {
         self.ticketNumber = ticketNumber
         self.seatNumber = seatNumber

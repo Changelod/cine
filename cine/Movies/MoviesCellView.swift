@@ -23,7 +23,6 @@ class MoviesCellView: UITableViewCell {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-//        imageView.tintColor = .white
         return imageView
     }()
     
@@ -38,19 +37,18 @@ class MoviesCellView: UITableViewCell {
     }()
     
     lazy var showTimeButton: UIButton = {
-       let button = UIButton(type: .system)
-       button.translatesAutoresizingMaskIntoConstraints = false
-       button.setTitle("Horarios", for: .normal)
-    button.setTitleColor(UIColor.white, for: .normal)
-       button.backgroundColor = UIColor.blue
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Horarios", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = UIColor.blue
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
-    button.sizeToFit()
+        button.sizeToFit()
         button.backgroundColor = UIColor.blue
         button.addTarget(self, action: #selector(handleDidTap), for: .touchUpInside)
-       
-       return button
-   }()
+        return button
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -86,8 +84,8 @@ extension MoviesCellView {
             movieImage.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             movieImage.leadingAnchor.constraint(equalTo: leadingAnchor),
             movieImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-//            movieImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
-//            movieImage.widthAnchor.constraint(equalToConstant: 100),
+            //            movieImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),
+            //            movieImage.widthAnchor.constraint(equalToConstant: 100),
             movieImage.heightAnchor.constraint(equalToConstant: 100)
         ])
     }

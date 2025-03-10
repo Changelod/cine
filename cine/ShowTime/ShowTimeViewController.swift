@@ -9,7 +9,6 @@ import UIKit
 
 class ShowTimeViewController: UIViewController{
     
-//    private var movies: [Movie] = [Movie(movieName: "Existenz", imageName: "Existenz"), Movie(movieName: "Crimes of the future", imageName: "Crimesoffuture")]
     private var movie: Movie
 
     init(movie: Movie) {
@@ -25,7 +24,6 @@ class ShowTimeViewController: UIViewController{
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 30)
-//        label.text = "Nombre de pelicula"
         label.textAlignment = .center
         label.backgroundColor = UIColor.white
         label.layer.masksToBounds = true
@@ -36,7 +34,6 @@ class ShowTimeViewController: UIViewController{
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-//        imageView.image = UIImage(named: "Existenz")
         return imageView
     }()
     

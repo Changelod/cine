@@ -17,6 +17,34 @@ class MoviesViewController: UIViewController{
             showTimes: [
                 ShowTime(
                     time: "1800",screen: "1",
+                    seats: [
+                        Seat(id: "A1", isAvailable: true),
+                        Seat(id: "A2", isAvailable: false), // Ocupado
+                        Seat(id: "A3", isAvailable: true),
+                        Seat(id: "A4", isAvailable: true),
+                        Seat(id: "A5", isAvailable: false),
+                        
+                        Seat(id: "B1", isAvailable: true),
+                        Seat(id: "B2", isAvailable: true),
+                        Seat(id: "B3", isAvailable: false),
+                        Seat(id: "B4", isAvailable: true),
+                        Seat(id: "B5", isAvailable: true),
+                        
+                        Seat(id: "C1", isAvailable: false),
+                        Seat(id: "C2", isAvailable: true),
+                        Seat(id: "C3", isAvailable: true),
+                        Seat(id: "C4", isAvailable: false),
+                        Seat(id: "C5", isAvailable: true),
+                        
+                        Seat(id: "D1", isAvailable: true),
+                        Seat(id: "D2", isAvailable: true),
+                        Seat(id: "D3", isAvailable: true),
+                        Seat(id: "D4", isAvailable: false),
+                        Seat(id: "D5", isAvailable: true)
+                    ]
+                ),
+                ShowTime(time: "2000",
+                         screen: "3",
                          seats: [
                             Seat(id: "A1", isAvailable: true),
                             Seat(id: "A2", isAvailable: false), // Ocupado
@@ -41,122 +69,93 @@ class MoviesViewController: UIViewController{
                             Seat(id: "D3", isAvailable: true),
                             Seat(id: "D4", isAvailable: false),
                             Seat(id: "D5", isAvailable: true)
-                            ]
+                         ]
                         ),
-                    ShowTime(time: "2000",
-                             screen: "3",
-                             seats: [
-                                Seat(id: "A1", isAvailable: true),
-                                Seat(id: "A2", isAvailable: false), // Ocupado
-                                Seat(id: "A3", isAvailable: true),
-                                Seat(id: "A4", isAvailable: true),
-                                Seat(id: "A5", isAvailable: false),
-                                
-                                Seat(id: "B1", isAvailable: true),
-                                Seat(id: "B2", isAvailable: true),
-                                Seat(id: "B3", isAvailable: false),
-                                Seat(id: "B4", isAvailable: true),
-                                Seat(id: "B5", isAvailable: true),
-                                
-                                Seat(id: "C1", isAvailable: false),
-                                Seat(id: "C2", isAvailable: true),
-                                Seat(id: "C3", isAvailable: true),
-                                Seat(id: "C4", isAvailable: false),
-                                Seat(id: "C5", isAvailable: true),
-                                
-                                Seat(id: "D1", isAvailable: true),
-                                Seat(id: "D2", isAvailable: true),
-                                Seat(id: "D3", isAvailable: true),
-                                Seat(id: "D4", isAvailable: false),
-                                Seat(id: "D5", isAvailable: true)
-                                ]
-                            ),
-                    ShowTime(time: "1830",
-                             screen: "4",
-                             seats: [
-                                Seat(id: "A1", isAvailable: true),
-                                Seat(id: "A2", isAvailable: false), // Ocupado
-                                Seat(id: "A3", isAvailable: true),
-                                Seat(id: "A4", isAvailable: true),
-                                Seat(id: "A5", isAvailable: false),
-                                
-                                Seat(id: "B1", isAvailable: true),
-                                Seat(id: "B2", isAvailable: true),
-                                Seat(id: "B3", isAvailable: false),
-                                Seat(id: "B4", isAvailable: true),
-                                Seat(id: "B5", isAvailable: true),
-                                
-                                Seat(id: "C1", isAvailable: false),
-                                Seat(id: "C2", isAvailable: true),
-                                Seat(id: "C3", isAvailable: true),
-                                Seat(id: "C4", isAvailable: false),
-                                Seat(id: "C5", isAvailable: true),
-                                
-                                Seat(id: "D1", isAvailable: true),
-                                Seat(id: "D2", isAvailable: true),
-                                Seat(id: "D3", isAvailable: true),
-                                Seat(id: "D4", isAvailable: false),
-                                Seat(id: "D5", isAvailable: true)
-                                ]
-                            ),
-                    ShowTime(time: "1400",
-                             screen: "6",
-                             seats: [
-                                Seat(id: "A1", isAvailable: true),
-                                Seat(id: "A2", isAvailable: false), // Ocupado
-                                Seat(id: "A3", isAvailable: true),
-                                Seat(id: "A4", isAvailable: true),
-                                Seat(id: "A5", isAvailable: false),
-                                
-                                Seat(id: "B1", isAvailable: true),
-                                Seat(id: "B2", isAvailable: true),
-                                Seat(id: "B3", isAvailable: false),
-                                Seat(id: "B4", isAvailable: true),
-                                Seat(id: "B5", isAvailable: true),
-                                
-                                Seat(id: "C1", isAvailable: false),
-                                Seat(id: "C2", isAvailable: true),
-                                Seat(id: "C3", isAvailable: true),
-                                Seat(id: "C4", isAvailable: false),
-                                Seat(id: "C5", isAvailable: true),
-                                
-                                Seat(id: "D1", isAvailable: true),
-                                Seat(id: "D2", isAvailable: true),
-                                Seat(id: "D3", isAvailable: true),
-                                Seat(id: "D4", isAvailable: false),
-                                Seat(id: "D5", isAvailable: true)
-                                ]
-                            ),
-                    ShowTime(time: "1600",
-                             screen: "7",
-                             seats: [
-                                Seat(id: "A1", isAvailable: true),
-                                Seat(id: "A2", isAvailable: false), // Ocupado
-                                Seat(id: "A3", isAvailable: true),
-                                Seat(id: "A4", isAvailable: true),
-                                Seat(id: "A5", isAvailable: false),
-                                
-                                Seat(id: "B1", isAvailable: true),
-                                Seat(id: "B2", isAvailable: true),
-                                Seat(id: "B3", isAvailable: false),
-                                Seat(id: "B4", isAvailable: true),
-                                Seat(id: "B5", isAvailable: true),
-                                
-                                Seat(id: "C1", isAvailable: false),
-                                Seat(id: "C2", isAvailable: true),
-                                Seat(id: "C3", isAvailable: true),
-                                Seat(id: "C4", isAvailable: false),
-                                Seat(id: "C5", isAvailable: true),
-                                
-                                Seat(id: "D1", isAvailable: true),
-                                Seat(id: "D2", isAvailable: true),
-                                Seat(id: "D3", isAvailable: true),
-                                Seat(id: "D4", isAvailable: false),
-                                Seat(id: "D5", isAvailable: true)
-                                ]
-                            ),
+                ShowTime(time: "1830",
+                         screen: "4",
+                         seats: [
+                            Seat(id: "A1", isAvailable: true),
+                            Seat(id: "A2", isAvailable: false), // Ocupado
+                            Seat(id: "A3", isAvailable: true),
+                            Seat(id: "A4", isAvailable: true),
+                            Seat(id: "A5", isAvailable: false),
+                            
+                            Seat(id: "B1", isAvailable: true),
+                            Seat(id: "B2", isAvailable: true),
+                            Seat(id: "B3", isAvailable: false),
+                            Seat(id: "B4", isAvailable: true),
+                            Seat(id: "B5", isAvailable: true),
+                            
+                            Seat(id: "C1", isAvailable: false),
+                            Seat(id: "C2", isAvailable: true),
+                            Seat(id: "C3", isAvailable: true),
+                            Seat(id: "C4", isAvailable: false),
+                            Seat(id: "C5", isAvailable: true),
+                            
+                            Seat(id: "D1", isAvailable: true),
+                            Seat(id: "D2", isAvailable: true),
+                            Seat(id: "D3", isAvailable: true),
+                            Seat(id: "D4", isAvailable: false),
+                            Seat(id: "D5", isAvailable: true)
+                         ]
+                        ),
+                ShowTime(time: "1400",
+                         screen: "6",
+                         seats: [
+                            Seat(id: "A1", isAvailable: true),
+                            Seat(id: "A2", isAvailable: false), // Ocupado
+                            Seat(id: "A3", isAvailable: true),
+                            Seat(id: "A4", isAvailable: true),
+                            Seat(id: "A5", isAvailable: false),
+                            
+                            Seat(id: "B1", isAvailable: true),
+                            Seat(id: "B2", isAvailable: true),
+                            Seat(id: "B3", isAvailable: false),
+                            Seat(id: "B4", isAvailable: true),
+                            Seat(id: "B5", isAvailable: true),
+                            
+                            Seat(id: "C1", isAvailable: false),
+                            Seat(id: "C2", isAvailable: true),
+                            Seat(id: "C3", isAvailable: true),
+                            Seat(id: "C4", isAvailable: false),
+                            Seat(id: "C5", isAvailable: true),
+                            
+                            Seat(id: "D1", isAvailable: true),
+                            Seat(id: "D2", isAvailable: true),
+                            Seat(id: "D3", isAvailable: true),
+                            Seat(id: "D4", isAvailable: false),
+                            Seat(id: "D5", isAvailable: true)
+                         ]
+                        ),
+                ShowTime(time: "1600",
+                         screen: "7",
+                         seats: [
+                            Seat(id: "A1", isAvailable: true),
+                            Seat(id: "A2", isAvailable: false), // Ocupado
+                            Seat(id: "A3", isAvailable: true),
+                            Seat(id: "A4", isAvailable: true),
+                            Seat(id: "A5", isAvailable: false),
+                            
+                            Seat(id: "B1", isAvailable: true),
+                            Seat(id: "B2", isAvailable: true),
+                            Seat(id: "B3", isAvailable: false),
+                            Seat(id: "B4", isAvailable: true),
+                            Seat(id: "B5", isAvailable: true),
+                            
+                            Seat(id: "C1", isAvailable: false),
+                            Seat(id: "C2", isAvailable: true),
+                            Seat(id: "C3", isAvailable: true),
+                            Seat(id: "C4", isAvailable: false),
+                            Seat(id: "C5", isAvailable: true),
+                            
+                            Seat(id: "D1", isAvailable: true),
+                            Seat(id: "D2", isAvailable: true),
+                            Seat(id: "D3", isAvailable: true),
+                            Seat(id: "D4", isAvailable: false),
+                            Seat(id: "D5", isAvailable: true)
+                         ]
+                        ),
             ]
-            
         ),
         Movie(
             movieName: "Crimes of the Future",
@@ -167,147 +166,147 @@ class MoviesViewController: UIViewController{
                     time: "1800",
                     screen: "2",
                     seats: [
-                       Seat(id: "A1", isAvailable: true),
-                       Seat(id: "A2", isAvailable: false), // Ocupado
-                       Seat(id: "A3", isAvailable: true),
-                       Seat(id: "A4", isAvailable: true),
-                       Seat(id: "A5", isAvailable: false),
-                       
-                       Seat(id: "B1", isAvailable: true),
-                       Seat(id: "B2", isAvailable: true),
-                       Seat(id: "B3", isAvailable: false),
-                       Seat(id: "B4", isAvailable: true),
-                       Seat(id: "B5", isAvailable: true),
-                       
-                       Seat(id: "C1", isAvailable: false),
-                       Seat(id: "C2", isAvailable: true),
-                       Seat(id: "C3", isAvailable: true),
-                       Seat(id: "C4", isAvailable: false),
-                       Seat(id: "C5", isAvailable: true),
-                       
-                       Seat(id: "D1", isAvailable: true),
-                       Seat(id: "D2", isAvailable: true),
-                       Seat(id: "D3", isAvailable: true),
-                       Seat(id: "D4", isAvailable: false),
-                       Seat(id: "D5", isAvailable: true)
-                       ]
+                        Seat(id: "A1", isAvailable: true),
+                        Seat(id: "A2", isAvailable: false), // Ocupado
+                        Seat(id: "A3", isAvailable: true),
+                        Seat(id: "A4", isAvailable: true),
+                        Seat(id: "A5", isAvailable: false),
+                        
+                        Seat(id: "B1", isAvailable: true),
+                        Seat(id: "B2", isAvailable: true),
+                        Seat(id: "B3", isAvailable: false),
+                        Seat(id: "B4", isAvailable: true),
+                        Seat(id: "B5", isAvailable: true),
+                        
+                        Seat(id: "C1", isAvailable: false),
+                        Seat(id: "C2", isAvailable: true),
+                        Seat(id: "C3", isAvailable: true),
+                        Seat(id: "C4", isAvailable: false),
+                        Seat(id: "C5", isAvailable: true),
+                        
+                        Seat(id: "D1", isAvailable: true),
+                        Seat(id: "D2", isAvailable: true),
+                        Seat(id: "D3", isAvailable: true),
+                        Seat(id: "D4", isAvailable: false),
+                        Seat(id: "D5", isAvailable: true)
+                    ]
                 ),
                 ShowTime(
                     time: "2000",
                     screen: "4",
                     seats: [
-                       Seat(id: "A1", isAvailable: true),
-                       Seat(id: "A2", isAvailable: false), // Ocupado
-                       Seat(id: "A3", isAvailable: true),
-                       Seat(id: "A4", isAvailable: true),
-                       Seat(id: "A5", isAvailable: false),
-                       
-                       Seat(id: "B1", isAvailable: true),
-                       Seat(id: "B2", isAvailable: true),
-                       Seat(id: "B3", isAvailable: false),
-                       Seat(id: "B4", isAvailable: true),
-                       Seat(id: "B5", isAvailable: true),
-                       
-                       Seat(id: "C1", isAvailable: false),
-                       Seat(id: "C2", isAvailable: true),
-                       Seat(id: "C3", isAvailable: true),
-                       Seat(id: "C4", isAvailable: false),
-                       Seat(id: "C5", isAvailable: true),
-                       
-                       Seat(id: "D1", isAvailable: true),
-                       Seat(id: "D2", isAvailable: true),
-                       Seat(id: "D3", isAvailable: true),
-                       Seat(id: "D4", isAvailable: false),
-                       Seat(id: "D5", isAvailable: true)
-                       ]
-                        ),
+                        Seat(id: "A1", isAvailable: true),
+                        Seat(id: "A2", isAvailable: false), // Ocupado
+                        Seat(id: "A3", isAvailable: true),
+                        Seat(id: "A4", isAvailable: true),
+                        Seat(id: "A5", isAvailable: false),
+                        
+                        Seat(id: "B1", isAvailable: true),
+                        Seat(id: "B2", isAvailable: true),
+                        Seat(id: "B3", isAvailable: false),
+                        Seat(id: "B4", isAvailable: true),
+                        Seat(id: "B5", isAvailable: true),
+                        
+                        Seat(id: "C1", isAvailable: false),
+                        Seat(id: "C2", isAvailable: true),
+                        Seat(id: "C3", isAvailable: true),
+                        Seat(id: "C4", isAvailable: false),
+                        Seat(id: "C5", isAvailable: true),
+                        
+                        Seat(id: "D1", isAvailable: true),
+                        Seat(id: "D2", isAvailable: true),
+                        Seat(id: "D3", isAvailable: true),
+                        Seat(id: "D4", isAvailable: false),
+                        Seat(id: "D5", isAvailable: true)
+                    ]
+                ),
                 ShowTime(
                     time: "1830",
                     screen: "6",
                     seats: [
-                       Seat(id: "A1", isAvailable: true),
-                       Seat(id: "A2", isAvailable: false), // Ocupado
-                       Seat(id: "A3", isAvailable: true),
-                       Seat(id: "A4", isAvailable: true),
-                       Seat(id: "A5", isAvailable: false),
-                       
-                       Seat(id: "B1", isAvailable: true),
-                       Seat(id: "B2", isAvailable: true),
-                       Seat(id: "B3", isAvailable: false),
-                       Seat(id: "B4", isAvailable: true),
-                       Seat(id: "B5", isAvailable: true),
-                       
-                       Seat(id: "C1", isAvailable: false),
-                       Seat(id: "C2", isAvailable: true),
-                       Seat(id: "C3", isAvailable: true),
-                       Seat(id: "C4", isAvailable: false),
-                       Seat(id: "C5", isAvailable: true),
-                       
-                       Seat(id: "D1", isAvailable: true),
-                       Seat(id: "D2", isAvailable: true),
-                       Seat(id: "D3", isAvailable: true),
-                       Seat(id: "D4", isAvailable: false),
-                       Seat(id: "D5", isAvailable: true)
-                       ]
-                    ),
+                        Seat(id: "A1", isAvailable: true),
+                        Seat(id: "A2", isAvailable: false), // Ocupado
+                        Seat(id: "A3", isAvailable: true),
+                        Seat(id: "A4", isAvailable: true),
+                        Seat(id: "A5", isAvailable: false),
+                        
+                        Seat(id: "B1", isAvailable: true),
+                        Seat(id: "B2", isAvailable: true),
+                        Seat(id: "B3", isAvailable: false),
+                        Seat(id: "B4", isAvailable: true),
+                        Seat(id: "B5", isAvailable: true),
+                        
+                        Seat(id: "C1", isAvailable: false),
+                        Seat(id: "C2", isAvailable: true),
+                        Seat(id: "C3", isAvailable: true),
+                        Seat(id: "C4", isAvailable: false),
+                        Seat(id: "C5", isAvailable: true),
+                        
+                        Seat(id: "D1", isAvailable: true),
+                        Seat(id: "D2", isAvailable: true),
+                        Seat(id: "D3", isAvailable: true),
+                        Seat(id: "D4", isAvailable: false),
+                        Seat(id: "D5", isAvailable: true)
+                    ]
+                ),
                 ShowTime(
                     time: "1400",
                     screen: "8",
                     seats: [
-                       Seat(id: "A1", isAvailable: true),
-                       Seat(id: "A2", isAvailable: false), // Ocupado
-                       Seat(id: "A3", isAvailable: true),
-                       Seat(id: "A4", isAvailable: true),
-                       Seat(id: "A5", isAvailable: false),
-                       
-                       Seat(id: "B1", isAvailable: true),
-                       Seat(id: "B2", isAvailable: true),
-                       Seat(id: "B3", isAvailable: false),
-                       Seat(id: "B4", isAvailable: true),
-                       Seat(id: "B5", isAvailable: true),
-                       
-                       Seat(id: "C1", isAvailable: false),
-                       Seat(id: "C2", isAvailable: true),
-                       Seat(id: "C3", isAvailable: true),
-                       Seat(id: "C4", isAvailable: false),
-                       Seat(id: "C5", isAvailable: true),
-                       
-                       Seat(id: "D1", isAvailable: true),
-                       Seat(id: "D2", isAvailable: true),
-                       Seat(id: "D3", isAvailable: true),
-                       Seat(id: "D4", isAvailable: false),
-                       Seat(id: "D5", isAvailable: true)
-                       ]
-                    ),
+                        Seat(id: "A1", isAvailable: true),
+                        Seat(id: "A2", isAvailable: false), // Ocupado
+                        Seat(id: "A3", isAvailable: true),
+                        Seat(id: "A4", isAvailable: true),
+                        Seat(id: "A5", isAvailable: false),
+                        
+                        Seat(id: "B1", isAvailable: true),
+                        Seat(id: "B2", isAvailable: true),
+                        Seat(id: "B3", isAvailable: false),
+                        Seat(id: "B4", isAvailable: true),
+                        Seat(id: "B5", isAvailable: true),
+                        
+                        Seat(id: "C1", isAvailable: false),
+                        Seat(id: "C2", isAvailable: true),
+                        Seat(id: "C3", isAvailable: true),
+                        Seat(id: "C4", isAvailable: false),
+                        Seat(id: "C5", isAvailable: true),
+                        
+                        Seat(id: "D1", isAvailable: true),
+                        Seat(id: "D2", isAvailable: true),
+                        Seat(id: "D3", isAvailable: true),
+                        Seat(id: "D4", isAvailable: false),
+                        Seat(id: "D5", isAvailable: true)
+                    ]
+                ),
                 ShowTime(
                     time: "1600",
                     screen: "9",
                     seats: [
-                       Seat(id: "A1", isAvailable: true),
-                       Seat(id: "A2", isAvailable: false), // Ocupado
-                       Seat(id: "A3", isAvailable: true),
-                       Seat(id: "A4", isAvailable: true),
-                       Seat(id: "A5", isAvailable: false),
-                       
-                       Seat(id: "B1", isAvailable: true),
-                       Seat(id: "B2", isAvailable: true),
-                       Seat(id: "B3", isAvailable: false),
-                       Seat(id: "B4", isAvailable: true),
-                       Seat(id: "B5", isAvailable: true),
-                       
-                       Seat(id: "C1", isAvailable: false),
-                       Seat(id: "C2", isAvailable: true),
-                       Seat(id: "C3", isAvailable: true),
-                       Seat(id: "C4", isAvailable: false),
-                       Seat(id: "C5", isAvailable: true),
-                       
-                       Seat(id: "D1", isAvailable: true),
-                       Seat(id: "D2", isAvailable: true),
-                       Seat(id: "D3", isAvailable: true),
-                       Seat(id: "D4", isAvailable: false),
-                       Seat(id: "D5", isAvailable: true)
-                       ]
-                    ),
+                        Seat(id: "A1", isAvailable: true),
+                        Seat(id: "A2", isAvailable: false), // Ocupado
+                        Seat(id: "A3", isAvailable: true),
+                        Seat(id: "A4", isAvailable: true),
+                        Seat(id: "A5", isAvailable: false),
+                        
+                        Seat(id: "B1", isAvailable: true),
+                        Seat(id: "B2", isAvailable: true),
+                        Seat(id: "B3", isAvailable: false),
+                        Seat(id: "B4", isAvailable: true),
+                        Seat(id: "B5", isAvailable: true),
+                        
+                        Seat(id: "C1", isAvailable: false),
+                        Seat(id: "C2", isAvailable: true),
+                        Seat(id: "C3", isAvailable: true),
+                        Seat(id: "C4", isAvailable: false),
+                        Seat(id: "C5", isAvailable: true),
+                        
+                        Seat(id: "D1", isAvailable: true),
+                        Seat(id: "D2", isAvailable: true),
+                        Seat(id: "D3", isAvailable: true),
+                        Seat(id: "D4", isAvailable: false),
+                        Seat(id: "D5", isAvailable: true)
+                    ]
+                ),
                 
             ]
         )
@@ -320,9 +319,6 @@ class MoviesViewController: UIViewController{
         label.text = "Cartelera"
         label.textAlignment = .center
         label.backgroundColor = UIColor.white
-//        label.layer.borderColor = UIColor.black.cgColor
-//        label.layer.borderWidth = 1.0
-//        label.layer.cornerRadius = 5.0
         label.layer.masksToBounds = true
         return label
     }()
@@ -331,7 +327,7 @@ class MoviesViewController: UIViewController{
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.rowHeight = UITableView.automaticDimension
-            tableView.estimatedRowHeight = 140
+        tableView.estimatedRowHeight = 140
         return tableView
     }()
     
